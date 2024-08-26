@@ -19,7 +19,7 @@ O projeto do Front-end constitui em uma aplicaçao que utiliza as seguintes Tecn
 
 Após o download do arquivo fonte e ou clone do projeto, pode acessar o back-end com os respectivos comandos:
 
-#### cd back/src/ProAtividade.API
+#### cd App-Atividades-React-asp/back/src/ProAtividade.API
 
 Apos pode rodar este comando em seu terminal em sequiencia.
 
@@ -31,7 +31,7 @@ Verificar se esta no diretorio especificado.
 em caso de erro, ou outros problemas contactar o autor.
 Para rodar o Front-end em seuc omputador pode fazelo com os respectivos comandos:
 
-#### cd front/
+#### cd App-Atividades-React-asp/front/
 
 #### npm install    e/ou   yarn install
 
