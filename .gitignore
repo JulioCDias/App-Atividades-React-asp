@@ -1,1 +1,3 @@
-Curso_fullstack_csharp_react.generated.sln
+.dockerignore
+Dockerfile
+docker-compose.yml
