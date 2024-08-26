@@ -44,7 +44,7 @@ export default function Atividade(props) {
             <i className='fas fa-pen me-2'></i>
             Editar
           </button>
-          <button className="btn-sm btn btn-outline-danger" onClick={() => props.deletarAtividade(props.ativ.id)}>
+          <button className="btn-sm btn btn-outline-danger" onClick={() => props.handleConfirmModal(props.ativ.id)}>
             <i className='fas fa-trash me-2'></i>
             Deletar
           </button>
@@ -62,5 +62,5 @@ Atividade.propTypes = {
     descricao: PropTypes.string.isRequired,
   }).isRequired,
   alterarAtividade: PropTypes.func.isRequired,
-  deletarAtividade: PropTypes.func.isRequired,
+  handleConfirmModal: PropTypes.func.isRequired,
 };

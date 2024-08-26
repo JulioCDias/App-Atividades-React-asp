@@ -8,7 +8,7 @@ return (
             <Atividade key={ativ.id}
                 ativ={ativ}
                 alterarAtividade={props.alterarAtividade}
-                deletarAtividade={props.deletarAtividade} />
+                handleConfirmModal={props.handleConfirmModal} />
         ))}
     </div>
 )
@@ -23,5 +23,5 @@ ListaAtividades.propTypes = {
         })
     ).isRequired,
     alterarAtividade: PropTypes.func.isRequired,
-    deletarAtividade: PropTypes.func.isRequired,
+    handleConfirmModal: PropTypes.func.isRequired,
 };
