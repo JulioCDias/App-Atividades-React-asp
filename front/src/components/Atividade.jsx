@@ -3,23 +3,21 @@ import PropTypes from 'prop-types';
 export default function Atividade(props) {
   function labelPrioridade(param) {
     switch (param) {
-      case "1":
-        return 'Baixo';
-      case "2":
-        return 'Normal';
-      case "3":
-        return 'Alto';
+      case 'Baixa':
+      case 'Normal':
+      case 'Alta':
+        return param;
       default:
         return 'Selecionar...';
     }
   }
   function stylePrioridade(param, icone) {
     switch (param) {
-      case "1":
+      case "Baixa":
         return icone ? 'fa-regular fa-face-smile' : 'success';
-      case "2":
+      case "Normal":
         return icone ? 'fa-regular fa-face-meh' : 'dark';
-      case "3":
+      case "Alta":
         return icone ? 'fa-regular fa-face-frown' : 'warning';
       default:
         return 'Não selecionado';

@@ -1,23 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
-using Atividade.API.Repositories;
 
-namespace Atividade.API.Models
+namespace ProAtividade.API.Models
 {
-    public class AtividadeModel
+    public class Atividade
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; }
-        public string Prioridade { get; set; }
-
-        public AtividadeModel()
-        {
-
-        }
-        public AtividadeModel(int id)
+        public Prioridade Prioridade { get; set; }
+        public Atividade() { }
+        public Atividade(int id)
         {
             Id = id;
         }

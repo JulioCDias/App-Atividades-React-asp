@@ -3,29 +3,41 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import AtividadeForm from './components/AtividadeForm';
 import ListaAtividades from './components/ListaAtividades';
+import api from './api/atividade';
 
 function App() {
-  const [index, setIndex] = useState(0)
   const [atividades, setAtividades] = useState([]);
-  const [atividade, setAtividade] = useState({id:0});
+  const [atividade, setAtividade] = useState({ id: 0 });
+  const pegaTodasAtividades = async() => {
+    const response = await api.get('atividade');
+    return response.data;
+  }
 
 
   useEffect(() => {
-    atividades.length <= 0 ? setIndex(1) : setIndex(Math.max.apply(Math, atividades.map(item => item.id)) + 1,)
-  }, [atividades])
+    const getAtividades = async () => {
+      const todasAtividades = await pegaTodasAtividades();
+      if (todasAtividades) setAtividades(todasAtividades)
+    };
+    getAtividades()
+  }, [])
 
 
-  function addAtividade(ativ) {
-    setAtividades([...atividades, { ...ativ, id: index }]);
+  const addAtividade = async (ativ) => {
+    const response = await api.post('atividade', ativ);
+    setAtividades([...atividades, response.data]);
   }
+
 
   function alterarAtividade(id) {
     const atividade = atividades.filter((atividade) => atividade.id === id);
     setAtividade(atividade[0]);
   }
 
-  function atualizarAtividade(ativ) { //Seleção de atividades, nova ou atual.
-    setAtividades(atividades.map((a) => (a.id === ativ.id ? ativ : a)))
+  const atualizarAtividade = async (ativ) => {
+    const response = await api.put(`atividade/${ativ.id}`, ativ);
+    const { id } = response.data
+    setAtividades(atividades.map((a) => (a.id === id ? response.data : a)))
     setAtividade({id: 0})
   }
 
@@ -33,8 +45,11 @@ function App() {
     setAtividade({id: 0})
   }
 
-  function deletarAtividade(id) {
-    setAtividades(atividades.filter((atividade) => atividade.id !== id))
+  const deletarAtividade = async (id) => {
+    if (await api.delete(`atividade/${id}`)) {
+      setAtividades(atividades.filter((atividade) => atividade.id !== id))
+    }
+  
   }
 
   return (

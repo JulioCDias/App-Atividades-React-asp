@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:7019",
-      "sslPort": 44387
+      "applicationUrl": "http://localhost:12751",
+      "sslPort": 44310
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Atividade.API": {
+    "ProAtividade.API": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,
