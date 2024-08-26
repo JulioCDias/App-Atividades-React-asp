@@ -2,16 +2,16 @@ import Atividade from './Atividade';
 import PropTypes from 'prop-types';
 
 export default function ListaAtividades(props) {
-  return (
-      <div className="mt-3">
-          {props.atividades.map(ativ => (
-              <Atividade key={ativ.id}
-                  ativ={ativ}
-                  alterarAtividade={props.alterarAtividade}
-                  deletarAtividade={props.deletarAtividade} />
-          ))}
-      </div>
-  )
+return (
+    <div className="mt-3">
+        {props.atividades.map(ativ => (
+            <Atividade key={ativ.id}
+                ativ={ativ}
+                alterarAtividade={props.alterarAtividade}
+                deletarAtividade={props.deletarAtividade} />
+        ))}
+    </div>
+)
 }
 ListaAtividades.propTypes = {
     atividades: PropTypes.arrayOf(
