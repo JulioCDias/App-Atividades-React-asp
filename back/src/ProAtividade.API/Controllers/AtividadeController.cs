@@ -8,7 +8,6 @@ using ProAtividade.Data.Context;
 using ProAtividade.Domain.Entities;
 using ProAtividade.Domain.Interfaces.Services;
 
-
 namespace ProAtividade.API.Controllers
 {
     [ApiController]
@@ -17,12 +16,19 @@ namespace ProAtividade.API.Controllers
     {
         public readonly IAtividadeService _atividadeService;
 
+        /// <summary>
+        /// Inicializa uma nova instância de <see cref="AtividadeController"/> com o serviço de atividade especificado.
+        /// </summary>
+        /// <param name="atividadeService">O serviço de atividade a ser utilizado pelo controlador.</param>
         public AtividadeController(IAtividadeService atividadeService)
         {
             _atividadeService = atividadeService;
-
-
         }
+
+        /// <summary>
+        /// Obtém todas as atividades.
+        /// </summary>
+        /// <returns>Uma lista de todas as atividades, ou NoContent se não houver atividades.</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -40,6 +46,11 @@ namespace ProAtividade.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Obtém uma atividade específica pelo ID.
+        /// </summary>
+        /// <param name="id">O ID da atividade a ser obtida.</param>
+        /// <returns>A atividade correspondente ao ID fornecido, ou NoContent se não for encontrada.</returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -57,6 +68,11 @@ namespace ProAtividade.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Adiciona uma nova atividade.
+        /// </summary>
+        /// <param name="model">O modelo da atividade a ser adicionada.</param>
+        /// <returns>A atividade recém-criada, ou NoContent se não puder ser criada.</returns>
         [HttpPost]
         public async Task<IActionResult> Post(Atividade model)
         {
@@ -74,6 +90,12 @@ namespace ProAtividade.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Atualiza uma atividade existente.
+        /// </summary>
+        /// <param name="id">O ID da atividade a ser atualizada.</param>
+        /// <param name="model">O modelo atualizado da atividade.</param>
+        /// <returns>A atividade atualizada, ou um código de status apropriado se a operação falhar.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, Atividade model)
         {
@@ -82,7 +104,7 @@ namespace ProAtividade.API.Controllers
                 if (model.Id != id)
                 {
                     return this.StatusCode(StatusCodes.Status409Conflict,
-                    $"Voçe esta tentando atualizar uma atividade errada.");
+                    $"Você está tentando atualizar uma atividade errada.");
                 }
                 var atividade = await _atividadeService.AtualizarAtividade(model);
                 if (atividade == null) return NoContent();
@@ -96,6 +118,11 @@ namespace ProAtividade.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Deleta uma atividade específica pelo ID.
+        /// </summary>
+        /// <param name="id">O ID da atividade a ser deletada.</param>
+        /// <returns>Uma mensagem de confirmação de deleção ou um código de status apropriado se a operação falhar.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -105,7 +132,7 @@ namespace ProAtividade.API.Controllers
                 if (atividade == null)
                 {
                     return this.StatusCode(StatusCodes.Status409Conflict,
-                    $"Voçe esta tentando atualizar uma atividade errada.");
+                    $"Você está tentando deletar uma atividade que não existe.");
                 }
 
                 if (await _atividadeService.DeletarAtividade(id))
