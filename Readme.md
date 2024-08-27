@@ -1,48 +1,48 @@
 # Projeto Atividades
 
-Este projeto foi desenvolvido ocm o proposito de comprovar habilidades tecnicas de Julio Cesar Dias Dos Santos, seu uso sem a devida autorização esta proibido.
-Projeto voltado a empresa Recrutado ATAK Sistemas ® Todos os Direitos Reservados.
+Este projeto foi desenvolvido com o propósito de comprovar habilidades técnicas de Julio Cesar Dias Dos Santos, seu uso sem a devida autorização está proibido.
+Projeto voltado a empresa Recrutadora  ATAK Sistemas ® Todos os direitos reservados.
 
 ---
 
-## Sobre o Projeto
+## Sobre o Projeto.
 
-O projeto é uma aplicação full-stack de Controle de Atividades, podendo ser possiver o cadastro de uma atividade, edição, leitura e excluçao da mesma. segundo os criteiros que foram passados via e-mail anteriormente.
+O projeto é uma aplicação full-stack de Controle de Atividades, podendo ser possível o cadastro de uma atividade, edição, leitura e exclusão da mesma. Segundo os critérios passados via e-mail anteriormente.
 
-O projeto constitui em uma aplicação Back end desenvolvida com as tecnologias: C# e com o Framework ASP.NET CORE em Sua Versao "5", com o Framework Entity em Sua versao "5",  e com Banco de Dados SQLIte. Os usos deste sao de responsabilidade do Autor sob contrato de fins educacionais.
+O projeto constitui-se em uma aplicação Back end desenvolvida com as tecnologias: C# e com o Framework ASP.NET CORE em sua versão "5", com o Framework Entity em sua versão "5",  e com Banco de Dados SQLIte. Os usos deste são de responsabilidade do autor sob contrato de fins educacionais.
 
-O projeto do Front-end constitui em uma aplicaçao que utiliza as seguintes Tecnologias: HTML, CSS, Javascript. Bem como os respectivas Bibliotecas e  Frameworks: Bootstrap, React.js.  Os usos deste sao de responsabilidade do Autor sob contrato de fins educacionais.
+O projeto do Front-end constitui-se em uma aplicação que utiliza as seguintes Tecnologias: HTML, CSS, Javascript. Bem como as respectivas Bibliotecas e  Frameworks: Bootstrap, React.js.  Os usos deste são de responsabilidade do autor sob contrato de fins educacionais.
 
 ---
 
-## Como utilizar os Projetos
+## Como utilizar os Projetos.
 
-Após o download do arquivo fonte e ou clone do projeto, pode acessar o back-end com os respectivos comandos:
+Após o download do arquivo-fonte e/ou clone do projeto, pode acessar o back-end com os respectivos comandos:
 
-#### cd back/src/ProAtividade.API
+#### cd App-Atividades-React-asp/back/src/ProAtividade.API
 
-Apos pode rodar este comando em seu terminal em sequiencia.
+Após, pode rodar este comando em seu terminal em sequência.
 
 #### dotnet watch run
 
 Obs: Caso haja algum erro com a execução do Back end:
-Vericicar se em sue computador esta disponivel os SDK do MIcrosoft C# em suas versoes 5 ... 9.
-Verificar se esta no diretorio especificado.
-em caso de erro, ou outros problemas contactar o autor.
-Para rodar o Front-end em seuc omputador pode fazelo com os respectivos comandos:
+Verificar se em seu computador está disponível os SDK do Microsoft C# em suas versões 5 ... 9.
+Verificar se está no diretorio especificado.
+em caso de erro, ou outros problemas, contactar o autor.
+Para rodar o Front-end em seu computador, pode fazê-lo com os respectivos comandos:
 
-#### cd front/
+#### cd App-Atividades-React-asp/front/
 
 #### npm install    e/ou   yarn install
 
 #### npm run dev    e/ou    yarn run dev
 
-Obs: Caso haja algum erro na execuçao do Front end:
-Verificar se em seu computador esta disponivel o NODE.js em sua Versão "22".
-Vericicar se esta no diretorio especificado.
-em caso de erro, ou outros problemas contactar o autor.
+Obs: Caso haja algum erro na execução do Front end:
+Verificar se em seu computador está disponível o NODE.js em sua versão "22".
+Verificar se está no diretorio especificado.
+Em caso de erro, ou outros problemas, contactar o autor.
 
-Em caso de divida estou a Disposição!
+Em caso de dívida estou a disposição!
 
 ### Contato
 
