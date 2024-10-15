@@ -1,7 +1,6 @@
 # Projeto Atividades
 
 Este projeto foi desenvolvido com o propósito de comprovar habilidades técnicas de Julio Cesar Dias Dos Santos, seu uso sem a devida autorização está proibido.
-Projeto voltado a empresa Recrutadora  ATAK Sistemas ® Todos os direitos reservados.
 
 ---
 
